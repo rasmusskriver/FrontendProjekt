@@ -1,4 +1,4 @@
-const myImage = document.querySelector("img");
+const myImage = document.querySelector("#myImage");
 
 const myRequest = new Request("flowers.jpg");
 
@@ -12,19 +12,19 @@ function buttonFunction() {
 
 	fetch(myRequest)
 
-
-	.then((response) => {
-	console.log("Fetch udført");
-		if (!response.ok) {
-	console.log("Fejl");
-			throw new Error(`HTTP error! Status: ${response.status}`);
-		}
-	console.log("response er ok");
-		return response.blob();
-	})
+		.then((response) => {
+			console.log("Fetch udført");
+			if (!response.ok) {
+				console.log("Fejl");
+				throw new Error(`HTTP error! Status: ${response.status}`);
+			}
+			console.log("response er ok");
+			return response.blob();
+		})
 
 		.then((response) => {
-	console.log("Tilføjet billede");
+			console.log("Tilføjet billede");
+			console.log(response);
 			myImage.src = URL.createObjectURL(response);
 
 		})
