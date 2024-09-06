@@ -26,6 +26,7 @@ function buttonFunction() {
 			console.log("Tilføjet billede");
 			console.log(response);
 			myImage.src = URL.createObjectURL(response);
+			console.log(URL);
 
 		})
 };
@@ -34,6 +35,6 @@ function buttonFunction() {
 
 function resetFunction() {
 
-	document.getElementById("tekstboks").innerHTML="";
+	document.getElementById("#myImage").innerHTML="";
 
 };
