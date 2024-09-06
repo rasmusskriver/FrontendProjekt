@@ -35,6 +35,6 @@ function buttonFunction() {
 
 function resetFunction() {
 
-	document.getElementById("#myImage").innerHTML="";
+	document.getElementById("myImage").innerHTML="";
 
 };
